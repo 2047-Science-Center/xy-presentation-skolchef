@@ -155,15 +155,22 @@ body{background:#1d1b16;font-family:"Montserrat",-apple-system,Segoe UI,Roboto,H
 .swbtn svg{width:26px;height:26px}
 #s-syv .instr{font-size:13.5px;color:var(--muted);font-weight:600}
 
-/* ====== 8 · VAD DET GER ER ====== */
-#s-ger .lead{margin-top:16px;max-width:1040px;font-size:19px;line-height:1.55;color:var(--ink)}
-#s-ger .frame{margin-top:18px;font-size:22px;font-weight:700;color:var(--green);border-left:5px solid var(--gold);padding-left:16px}
-#s-ger .cards{display:flex;gap:20px;margin-top:22px}
-#s-ger .c{flex:1;background:#fffdf8;border:2px solid rgba(44,74,56,.22);border-radius:14px;padding:18px 20px}
-#s-ger .c h3{margin:0 0 8px;font-size:15px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
-#s-ger .c .big{font-size:30px;font-weight:800;color:var(--green);line-height:1.1}
-#s-ger .c p{margin:8px 0 0;font-size:14px;line-height:1.5;color:var(--ink)}
-#s-ger .syvquote{margin-top:22px;font-style:italic;color:var(--muted);font-size:15px;border-top:1px solid rgba(44,74,56,.15);padding-top:14px}
+/* ====== 8 · VAD UPPNÅR PROJEKTET ====== */
+#s-ger .page-title{margin-bottom:4px}
+#s-ger .cards{display:flex;gap:22px;margin:54px 0 auto;align-items:stretch}
+#s-ger .c{flex:1;background:#fffdf8;border:2px solid rgba(44,74,56,.22);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column}
+#s-ger .c .lvl{font-size:22px;font-weight:800;color:var(--green);margin-bottom:12px}
+#s-ger .c p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink)}
+#s-ger .c .src{display:block;margin-top:12px;color:var(--muted);font-size:12.5px;font-style:italic}
+
+/* ====== 9 · GENOMFÖRANDE ====== */
+#s-krav .body{display:flex;gap:40px;margin-top:22px;flex:1;min-height:0;align-items:center}
+#s-krav .reqs{width:560px;display:grid;grid-template-columns:1fr 1fr;gap:24px 30px}
+#s-krav .req h3{margin:0 0 6px;color:var(--green);font-weight:700;font-size:16px}
+#s-krav .req p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink)}
+#s-krav .req p + p{margin-top:2px}
+#s-krav .rig{flex:1;align-self:stretch;background:rgba(44,74,56,.05);border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#s-krav .rig img{max-width:100%;max-height:100%;object-fit:contain}
 </style>
 </head>
 <body>
@@ -248,7 +255,7 @@ body{background:#1d1b16;font-family:"Montserrat",-apple-system,Segoe UI,Roboto,H
               <p class="foot-note" data-step="3">60–90 minuter per grupp. SYV håller i den avslutande delen.</p>
             </div>
             <div class="col-vis">
-              <div class="rig" data-step="1"><img src="assets/rigg-top.png" alt="Riggen ovanifrån – fyra stationer"></div>
+              <div class="rig" data-step="1"><img src="assets/rig.png" alt="Riggen med de fyra stationerna"></div>
               <div class="stations" data-step="2">
                 <div class="st"><div class="ph"><img src="assets/station-1.png" alt=""></div><span>Station 1</span></div>
                 <div class="st"><div class="ph"><img src="assets/station-2.png" alt=""></div><span>Station 2</span></div>
@@ -299,9 +306,10 @@ body{background:#1d1b16;font-family:"Montserrat",-apple-system,Segoe UI,Roboto,H
             </div>
             <div class="right">
               <div class="qcard" data-step="2">
-                <div class="q">Samma arbetsuppgift — hur beskrevs den för de två grupperna?</div>
-                <div class="opt"><span class="mk"></span>Likadant för båda grupperna</div>
-                <div class="opt correct"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Olika — könskodad beroende på grupp</div>
+                <div class="q">Ser du någon skillnad i hur samma sak beskrevs för er och för gruppen bakom?</div>
+                <div class="opt"><span class="mk"></span>Det ena verkar svårare — det andra enklare.</div>
+                <div class="opt correct"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Det ena framställs som mer för tjejer — det andra mer för killar.</div>
+                <div class="opt"><span class="mk"></span>Det ena verkar roligare — det andra tråkigare.</div>
               </div>
               <div class="punch" data-step="3">”För bövelen — det vi trodde var en kvinnlig arbetsuppgift framstod som manlig för dem.” <b>Insikten kommer från eleverna själva.</b></div>
               <div class="proofbar" data-step="4">I tester väljer <b>75–80 %</b> enligt den förutbestämda könskodningen — och blir förvånade när de inser det.<span class="elev">”Va, visste ni att jag skulle välja det? För att jag är kille?”</span></div>
@@ -339,16 +347,39 @@ body{background:#1d1b16;font-family:"Montserrat",-apple-system,Segoe UI,Roboto,H
       <!-- ===== 8 · VAD DET GER ER ===== -->
       <section class="page" id="s-ger">
         <div class="wrap">
-          <div class="kicker">Vad det ger er</div>
-          <h1 class="page-title">Från osynligt till synligt</h1>
-          <p class="lead" data-step="1">Eleverna lämnar X&amp;Y med en <span class="hl">medvetenhet om sina egna normer</span> — i vilken utsträckning kön påverkar deras val. En attitydförflyttning, en aha-upplevelse, som er studie- och yrkesvägledning kan bygga vidare på.</p>
-          <div class="frame" data-step="2">X&amp;Y är lovskola för framtidsbilden — samma uppdrag, den del som stått obemannad.</div>
-          <div class="cards" data-step="3">
-            <div class="c"><h3>Samhällsvinst</h3><div class="big">+10 %</div><p>Minskad könsojämställdhet i utbildning och arbetsliv kan ge upp till ~10 % högre BNP per capita i EU till 2050 (EIGE).</p></div>
-            <div class="c"><h3>Regionen</h3><div class="big">Dalarna</div><p>En ansträngd kompetensförsörjning och en könssegregerad arbetsmarknad som behöver brytas — därför stöttar Interreg och Region Dalarna projektet.</p></div>
-            <div class="c"><h3>Skolan</h3><div class="big">Uppdraget</div><p>Ett verktyg som levererar en del av det kompensatoriska uppdraget ni redan har — och som vi kan visa rör eleverna.</p></div>
+          <div class="kicker">Syftet</div>
+          <h1 class="page-title">Vad uppnår projektet?</h1>
+          <div class="cards">
+            <div class="c" data-step="1">
+              <div class="lvl">För skolan</div>
+              <p>Eleverna får syn på hur starkt kön styr deras val — en attitydförflyttning. Skolan levererar en del av det kompensatoriska uppdraget, med ett verktyg som visar effekt.</p>
+            </div>
+            <div class="c" data-step="2">
+              <div class="lvl">För Dalarna</div>
+              <p>En mindre könssegregerad arbetsmarknad och en starkare kompetensförsörjning — i en region som behöver det.</p>
+            </div>
+            <div class="c" data-step="3">
+              <div class="lvl">För samhället i stort</div>
+              <p>Bättre matchning mellan människor och yrken, vilket också ger tillväxt. <span class="src">EIGE: upp till ~10 % högre BNP per capita i EU till 2050</span></p>
+            </div>
           </div>
-          <div class="syvquote" data-step="4">”[Citat från studie- och yrkesvägledare — inväntas]”</div>
+        </div>
+      </section>
+
+      <!-- ===== 9 · GENOMFÖRANDE ===== -->
+      <section class="page" id="s-krav">
+        <div class="wrap">
+          <div class="kicker">Praktiskt</div>
+          <h1 class="page-title">Vad som krävs för genomförande</h1>
+          <div class="body">
+            <div class="reqs">
+              <div class="req"><h3>Plats &amp; utrymme</h3><p>Golvyta minst 7 × 7 meter.</p><p>Takhöjd minst 240 cm.</p></div>
+              <div class="req"><h3>Ström &amp; uppkoppling</h3><p>230 V eluttag.</p><p>Fungerar bäst via ethernet till det lokala nätverket.</p></div>
+              <div class="req"><h3>Montering</h3><p>Uppackning ca 8 timmar.</p><p>Nedpackning ca 8 timmar.</p></div>
+              <div class="req"><h3>Genomförande</h3><p>60–90 minuter per grupp.</p><p>SYV håller i den avslutande delen; lärare behöver inte delta.</p></div>
+            </div>
+            <div class="rig"><img src="assets/rig.png" alt="X&Y-riggen"></div>
+          </div>
         </div>
       </section>
 
